@@ -5,6 +5,28 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+
+ // Get the text content of the element
+ const text = document.getElementById('typewriter').textContent;
+
+ // Clear the existing text content
+ document.getElementById('typewriter').textContent = '';
+
+ // Function to simulate typewriter effect
+ function typeWriter(text, i) {
+   if (i < text.length) {
+     document.getElementById('typewriter').textContent += text.charAt(i);
+     i++;
+     setTimeout(() => {
+       typeWriter(text, i);
+     }, 80); // Adjust the speed of typing by changing the timeout value (in milliseconds)
+   }
+ }
+
+ // Start the typewriter effect
+ typeWriter(text, 0);
+
+
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 

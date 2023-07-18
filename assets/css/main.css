@@ -26,6 +26,7 @@
   --color-secondary: #0e1d34;
 }
 
+
 /* Smooth scroll behavior */
 :root {
   scroll-behavior: smooth;
@@ -39,13 +40,17 @@ body {
   color: var(--color-default);
 }
 
+p {
+  font-size: 1rem;
+}
+
 a {
   color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #406aff;
+  color: #3094c5;
   text-decoration: none;
 }
 
@@ -57,6 +62,7 @@ h5,
 h6 {
   font-family: var(--font-primary);
 }
+
 
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -92,7 +98,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--color-primary);
+  background: #3094c5;
   left: 0;
   right: 0;
   bottom: 0;
@@ -139,7 +145,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: var(--color-primary);
+  background: #3094c5;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -153,7 +159,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: rgba(13, 66, 255, 0.8);
+  background: #3094c5;
   color: #fff;
 }
 
@@ -269,7 +275,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0 10px 30px;
+    padding: 23px 0 0 30px;
     font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 400;
@@ -304,7 +310,7 @@ section {
   .navbar .get-a-quote:hover,
   .navbar .get-a-quote:focus:hover {
     color: #fff;
-    background: #2756ff;
+    background: #3094c5;
   }
 
   .navbar .dropdown ul {
@@ -508,14 +514,24 @@ section {
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
+
+.featured-height {
+  /* height: 100%; */
+}
 .featured-services .service-item {
-  position: relative;
+  /* position: relative; */
   height: 100%;
-  margin-bottom: 20px;
+  /* box-shadow: 0px 0px 0px 0px #fff; */
+  box-shadow: 4px 5px 10px -4px #8e8b8d !important;
+
+  border-radius: 6px;
+  /* box-shadow: ; */
+  /* width: 100%; */
 }
 
 .featured-services .service-item .icon {
   margin-right: 20px;
+  margin-bottom: 25px;
 }
 
 .featured-services .service-item .icon i {
@@ -529,19 +545,19 @@ section {
 }
 
 .featured-services .service-item:hover .icon i {
-  color: var(--color-primary);
+  color: #3094c5;
 }
 
 .featured-services .service-item .title {
   font-weight: 700;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--color-secondary);
   transition: 0.3s;
 }
 
 .featured-services .service-item .description {
-  font-size: 15px;
+  font-size: 14px;
   color: #132848;
   margin-bottom: 10px;
 }
@@ -562,7 +578,12 @@ section {
 .featured-services .service-item:hover .title,
 .featured-services .service-item:hover .readmore,
 .featured-services .service-item:hover .icon i {
-  color: var(--color-primary);
+  /* color: #3094c5; */
+}
+.featured-services .service-item:hover {
+  transform: scale(1.05, 1.05) !important;
+  /* box-shadow: 4px 5px 10px -4px #8e8b8d !important; */
+  transition: all 0.3s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -601,7 +622,7 @@ section {
 }
 
 .about .content ul p {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .about .content p:last-child {
@@ -674,7 +695,7 @@ section {
 }
 
 .about .play-btn:hover:after {
-  border-left: 15px solid var(--color-primary);
+  border-left: 15px solid #3094c5;
   transform: scale(20);
 }
 
@@ -713,26 +734,25 @@ section {
 
 .services .card h3 {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 5px;
-  padding: 10px 30px;
+  padding: 10px 0 0px 10px;
   text-transform: uppercase;
 }
-
-.services .card a {
+.services .services .card a {
   color: #36a4db;
   transition: 0.3;
 }
 
 .services .card a:hover {
-  color: var(--color-primary);
+  color: #3094c5;
 }
 
 .services .card p {
-  padding: 0 30px;
+  padding: 0 10px;
   margin-bottom: 30px;
   color: var(--color-secondary);
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .services .card:hover .card-img img {
@@ -830,12 +850,11 @@ section {
   margin-bottom: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Stats Counter Section
 --------------------------------------------------------------*/
 .stats-item {
-  padding: 30px;
+  /* padding: 30px; */
   width: 100%;
 }
 
@@ -877,7 +896,7 @@ section {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   min-height: 50vh;
   background-color: #07222f;
   background-image: url("../img/hero-bg.png");
@@ -903,9 +922,9 @@ section {
 }
 
 .hero p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .hero form {
@@ -937,7 +956,7 @@ section {
 }
 
 .hero .stats-item {
-  padding: 30px;
+  /* padding: 30px; */
   width: 100%;
 }
 
@@ -956,7 +975,7 @@ section {
   display: block;
   width: 20px;
   height: 3px;
-  background: var(--color-primary);
+  background: #3094c5;
   left: 0;
   right: 0;
   bottom: 0;
@@ -966,7 +985,7 @@ section {
 .hero .stats-item p {
   padding: 0;
   margin: 0;
-  font-family: var(--font-primary);
+
   font-size: 15px;
   font-weight: 600;
 }
@@ -1086,6 +1105,13 @@ section {
   color: #fff;
 }
 
+.foot-size {
+  max-width: 111px;
+}
+.foot-size div p {
+  font-size: 12px;
+}
+
 /* //////////////////////foot//////////////////// */
 .foot-group {
   position: relative;
@@ -1145,6 +1171,9 @@ section {
   font-size: 30px;
   font-weight: 800;
 }
+.stats-item p {
+  width: 100%;
+}
 .btn-primary {
   --bs-btn-bg: none !important;
 }
@@ -1152,8 +1181,9 @@ section {
   justify-content: space-between;
 }
 
-.platform {
-  background-color: #36a4db;
+.platform,
+#weDo {
+  background-color: #2bbdf3;
 }
 .platform h2,
 .platform h3,
@@ -1178,13 +1208,71 @@ section {
 }
 .what-row div.borders {
   /* width: 22%; */
-  box-shadow: 4px 5px 10px -4px #8e8b8d;
-  background-color: #dbddd369;
+  /* box-shadow: 4px 5px 10px -4px #8e8b8d; */
+  box-shadow: 6px 5px 9px -3px #707070;
+  background-color: #fff;
   height: 100%;
   /* padding: 22px; */
 }
 .what-row p {
   /* padding: 18px 0 9px 16px; */
   padding: 16px 16px 10px 16px;
-width: 50%;
+  width: 50%;
+}
+.whatWeDo h2 {
+  color: #fff;
+}
+
+.hero-btn {
+  padding: 20px;
+}
+
+.quick-overlay {
+  display: grid;
+  height: fit-content;
+}
+
+.quick-overlay h2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.hide-me {
+  visibility: hidden;
+}
+.btn-primary {
+  /* position: relative; */
+}
+.btn-demo {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 2px solid #2bbdf3;
+  color: #fff;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start the slider outside the button */
+  width: 100%;
+  height: 100%;
+  background-color: #2bbdf3; /* Color of the sliding element */
+  transition: left 0.7s ease-in-out; /* Transition for left property */
+}
+.btn-demo:hover .slider {
+  left: 0; /* Slide the slider from left to right */
+}
+.btn-text {
+  position: relative; /* Required for z-index to work */
+  z-index: 1; /* Ensure the text appears above the slider */
+}
+.platform-bg {
+  background-image: url("/assets/img/samsung-S9-Mockup.png");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: canter;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
