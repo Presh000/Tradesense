@@ -1,31 +1,22 @@
-/**
- * Template Name: Logis
- * Updated: May 30 2023 with Bootstrap v5.3.0
- * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+// Get the text content of the element
+const text = document.getElementById("typewriter").textContent;
 
- // Get the text content of the element
- const text = document.getElementById('typewriter').textContent;
+// Clear the existing text content
+document.getElementById("typewriter").textContent = "";
 
- // Clear the existing text content
- document.getElementById('typewriter').textContent = '';
+// Function to simulate typewriter effect
+function typeWriter(text, i) {
+  if (i < text.length) {
+    document.getElementById("typewriter").textContent += text.charAt(i);
+    i++;
+    setTimeout(() => {
+      typeWriter(text, i);
+    }, 80); // Adjust the speed of typing by changing the timeout value (in milliseconds)
+  }
+}
 
- // Function to simulate typewriter effect
- function typeWriter(text, i) {
-   if (i < text.length) {
-     document.getElementById('typewriter').textContent += text.charAt(i);
-     i++;
-     setTimeout(() => {
-       typeWriter(text, i);
-     }, 80); // Adjust the speed of typing by changing the timeout value (in milliseconds)
-   }
- }
-
- // Start the typewriter effect
- typeWriter(text, 0);
-
+// Start the typewriter effect
+typeWriter(text, 0);
 
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
@@ -127,25 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /**
-   * Initiate pURE cOUNTER
-   */
-  new PureCounter();
+
   
-
-
-  // // Format PureCounter value for Retail Outlet
-  // const retailOutletCounter = document.querySelector(
-  //   '.purecounter[data-purecounter-start="0"][data-purecounter-end="1800000"]'
-  // );
-  // retailOutletCounter.addEventListener("PureCounter.start", function () {
-  //   const formattedValue = "1.8M";
-  //   this.textContent = formattedValue;
-  // });
-
-  /**
-   * Init swiper slider with 1 slide at once in desktop view
-   */
   new Swiper(".slides-1", {
     speed: 600,
     loop: true,
